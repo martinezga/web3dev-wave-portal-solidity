@@ -1,15 +1,9 @@
-# Basic Sample Hardhat Project
+# Construa um App com Solidity + Ethereum Smart Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+Um projeto de nove dias onde você irá aprender Solidity, escrever e implementar smart-contracts na blockchain e desenvolver um Web3 App para interagir com seu contrato. Perfeito para entusiastas em blockchain e desenvolvedores de Web3.
 
-Try running some of the following tasks:
+https://bootcamp.web3dev.com.br/courses/Solidity_And_Smart_Contracts
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+Turma: Inovadoras
+
+Origem: WEB3DEV
