@@ -15,7 +15,7 @@ contract WavePortal {
     event NewWave(address indexed from, uint256 id, uint256 timestamp, string message);
     Wave[] waves;
 
-    constructor() {
+    constructor() payable {
         console.log("Hello world Smart Contract!");
     }
 
@@ -26,6 +26,17 @@ contract WavePortal {
         waves.push(Wave(msg.sender, totalWaves, _message, block.timestamp));
         // google for
         emit NewWave(msg.sender, totalWaves, block.timestamp, _message);
+
+        uint256 prizeAmount = 0.0001 ether;
+
+        require(
+        prizeAmount <= address(this).balance,
+        "Trying to withdraw more money than the contract has."
+        );
+        // address(this).balance is the balance of the contract itself
+        // (msg.sender).call{value: prizeAmount}("") is the magic line where we send money
+        (bool success, ) = (msg.sender).call{value: prizeAmount}("");
+        require(success, "Failed to withdraw money from contract.");
     }
 
     function getAllWaves() public view returns (Wave[] memory) {
