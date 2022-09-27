@@ -41,7 +41,7 @@ contract WavePortal {
         // google for
         emit NewWave(msg.sender, totalWaves, block.timestamp, _message);
 
-        if (seed <= 20 {
+        if (seed <= 20) {
             console.log("%s win!", msg.sender);
             uint256 prizeAmount = 0.0001 ether;
 
